@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Paswword Generator</title>
+</head>
+<body>
+    <div id="app">
+        <div class="holder">
+            <h2 class="password-title">Password Generator</h2>
+            <div class="passwor-div">
+                <span>{{password}}</span>
+            </div>
+            <div class="content">
+                <div class="select">
+                    <div class="text">
+                        <span class="title">Character Length</span>
+                        <span class="number">{{rangeValue}}</span>
+                    </div>
+                    <input type="range" step="1" v-model="rangeValue" max="15" min="8">
+                </div>
+                
+                <div class="button">
+                    <span @click="genratePassword">Generate</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        let vm = new Vue( {
+            el : '#app',
+            data : {
+                rangeValue : 10 ,
+                password : "",
+            },
+            methods : {
+                genratePassword : function() {
+                    this.password = "";
+                    let chars = '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                    let passwordLength = this.rangeValue;
+                    for (var i = 0; i <= passwordLength; i++) {
+                var randomNumber = Math.floor(Math.random() * chars.length);
+                this.password += chars.substring(randomNumber, randomNumber +1);
+                }
+                },
+                captilzeWords() {
+                    if (document.querySelector('#check1').checked) {
+                    for (let  i =0 ; i < this.password.length; i++) {
+                        return this.password[i].toUpperCase()
+                        return document.querySelector(".passwor-div span").textContent.toUpperCase()
+                    }
+                    }
+                }
+                }
+            }
+        )
+    </script>
+</body>
+</html>

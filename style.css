@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.holder {
+  position: relative;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: #fff;
+}
+.holder .password-title {
+  opacity: 0.7;
+  color: #777;
+  text-align: center;
+  font-size: 20px;
+}
+.holder .passwor-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #222;
+  align-items: center;
+}
+.holder .passwor-div span {
+  font-size: 1.5em;
+  color: #fff;
+}
+.holder .passwor-div i {
+  color: #a3ffad;
+}
+.holder .content {
+  background-color: #222;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.holder .content .select {
+  display: flex;
+  flex-direction: column;
+}
+.holder .content .select .text {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.holder .content .select .text span.title {
+  font-size: 14px;
+  opacity: 0.8;
+}
+.holder .content .select .text .number {
+  font-size: 30px;
+  color: #a3ffad;
+}
+.holder .content .checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.holder .content .checkbox input[type=checkbox] i {
+  background-color: #a3ffad;
+}
+.holder .content .checkbox label {
+  opacity: 0.8;
+  margin-left: 15px;
+}
+.holder .content .button {
+  background-color: #a3ffad;
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.holder .content .button span {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #111;
+  transition: 0.3s;
+}
+.holder .content .button:hover {
+  background-color: #6ae779;
+  color: #444;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #a3ffad;
+  border-radius: 1px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #a3ffad;
+}/*# sourceMappingURL=style.css.map */
