@@ -131,3 +131,14 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: #a3ffad;
 }/*# sourceMappingURL=style.css.map */
+
+.check {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.check div {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
